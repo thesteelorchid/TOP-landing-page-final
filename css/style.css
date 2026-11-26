@@ -1,0 +1,778 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #003087;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: calc(100% - 48px);
+    max-width: 1760px;
+    margin: 20px auto;
+}
+
+/* Навигация */
+.navigation {
+
+    min-height: 80px;
+    padding: 14px 35px;
+    background-color: white;
+    border: 3px solid #003087;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.navigation a,
+.navigation a,
+.mobile-menu a {
+    color: #003087;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navigation a:hover,
+.mobile-menu a:hover {
+    color: #ff6b00;
+}
+
+/* Логотип */
+.logo {
+    display: block;
+    width: 380px;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header {
+        width: calc(100% - 24px);
+        margin: 12px auto;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: relative;
+        background: white;
+        border-radius: 30px;
+        padding: 12px 20px;
+        text-align: right;
+    }
+
+    .mobile-menu summary {
+        cursor: pointer;
+        color: #003087;
+        font-size: 26px;
+        font-weight: bold;
+        list-style: none;
+    }
+
+    .mobile-menu nav {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 0 10px;
+        text-align: left;
+    }
+
+    .mobile-menu a {
+        font-size: 16px;
+    }
+}/* Главный заголовок */
+.hero-title {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 40px 70px;
+}
+
+.hero-title h1 {
+    color: #003087;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+/* Карточка услуги */
+.service-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 40px;
+
+    margin-top: 40px;
+    padding: 0 0 0 70px;
+    gap: 40px;
+
+    overflow: hidden;
+    height: 400px;
+}
+/* Текстовая часть */
+.service-text {
+    flex: 1;
+    padding: 50px 0;
+}
+
+.service-text h2 {
+    color: #003087;
+    font-size: 42px;
+    line-height: 1.25;
+    margin: 0 0 35px 0;
+}
+
+.service-text p {
+    color: #003087;
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.service-text span {
+    color: #ff6b00;
+}
+
+/* Фотография */
+.service-image {
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.service-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Адаптация карточки услуги */
+@media (max-width: 700px) {
+
+    .hero-title {
+        padding: 25px;
+        margin-top: 25px;
+    }
+
+    .hero-title h1 {
+        font-size: 28px;
+    }
+
+    .service-card {
+       height: auto;
+    }
+
+    .service-text {
+        padding: 0;
+    }
+
+    .service-text h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .service-text p {
+        font-size: 16px;
+    }
+
+    .service-image {
+        width: 100%;
+        height: 220px;
+        border-radius: 15px;
+    }
+}/* Места работы */
+.work-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    min-height: 500px;
+    gap: 40px;
+    width: 100%;
+}
+
+.work-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.work-text h2 {
+    color: #003087;
+    font-size: 52px;
+    line-height: 1.25;
+    margin: 0 0 35px 0;
+}
+
+.work-description {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.work-description .location-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+}
+
+.work-description p {
+    flex: 1;
+    color: #003087;
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.work-map {
+  .work-map {
+    flex: 0 0 40%;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.work-map img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+}/* Наши услуги */
+.services {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    min-height: 400px;
+    width: 100%;
+}
+
+.services h2 {
+    color: #003087;
+    font-size: 52px;
+    line-height: 1.25;
+    margin: 0 0 45px 0;
+}
+
+.services-content ul {
+    color: #003087;
+    font-size: 26px;
+    line-height: 1.8;
+    padding-left: 35px;
+    margin: 0;
+}
+
+.services-content li {
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+/* Наше оборудование */
+.equipment {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    min-height: 400px;
+    width: 100%;
+}
+
+.equipment h2 {
+    color: #003087;
+    font-size: 52px;
+    line-height: 1.25;
+    margin: 0 0 45px 0;
+}
+
+.equipment ul {
+    color: #003087;
+    font-size: 26px;
+    line-height: 1.8;
+    padding-left: 35px;
+    margin: 0;
+}
+
+.equipment li {
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+/* Галерея оборудования */
+/* Плашка с фотографиями оборудования */
+.equipment-gallery {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    width: 100%;
+
+    background-color: #FF7900;
+    border-radius: 40px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+/* Фотографии */
+.equipment-photo {
+    flex: 1;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.equipment-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}/* Гарантии */
+.guarantees {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    min-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.guarantees h2 {
+    color: #003087;
+    font-size: 52px;
+    margin: 0 0 60px;
+}
+
+.guarantees-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.guarantee-item {
+    flex: 1;
+    text-align: center;
+    color: #003087;
+    font-size: 22px;
+    font-weight: bold;
+
+}.guarantee-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 25px;
+}/* Контакты */
+/* Плашка контактов */
+.contacts {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    box-sizing: border-box;
+}
+
+.contacts h2 {
+    color: #003087;
+    font-size: 52px;
+    margin: 0 0 55px;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) 450px;
+    align-items: center;
+    column-gap: 35px;
+    width: 100%;
+}
+
+.contacts-icon {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.contacts-content p {
+    color: #003087;
+    font-size: 26px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contacts-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-self: end;
+}
+
+.contacts-details a {
+    color: #003087;
+    font-size: 24px;
+    text-decoration: none;
+}
+.contacts {
+    max-width: 1860px;
+    margin: 40px auto 0;
+}/* Контакты */
+.contacts {
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding: 60px 70px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contacts h2 {
+    color: #003087;
+    font-size: 52px;
+    margin: 0 0 55px;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr) 450px;
+    align-items: center;
+    gap: 35px;
+}
+
+.contacts-icon {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.contacts-content p {
+    color: #003087;
+    font-size: 26px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contacts-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-self: end;
+}
+
+.contacts-details a {
+    color: #003087;
+    font-size: 24px;
+    text-decoration: none;
+}
+/* Кнопка возврата наверх */
+/* Кнопка возврата наверх */
+.back-to-top {
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+
+    width: 64px;
+    height: 64px;
+
+    border: 2px solid #ff6b00;
+    border-radius: 14px;
+
+    background-color: #003087;
+    color: white;
+
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #ff6b00;
+    border-color: #003087;
+}
+/* Единая ширина основных секций */
+.hero-title,
+.service-card,
+.work-area,
+.services,
+.equipment,
+.equipment-gallery,
+.guarantees,
+.contacts {
+    width: 92%;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Бургер-меню */
+@media (max-width: 900px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: relative;
+        width: 100%;
+        background: white;
+        border-radius: 25px;
+        padding: 15px 25px;
+        text-align: right;
+    }
+
+    .mobile-menu summary {
+        cursor: pointer;
+        color: #003087;
+        font-size: 30px;
+        font-weight: bold;
+        list-style: none;
+    }
+
+    .mobile-menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-menu nav {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 0 10px;
+        text-align: left;
+    }
+
+    .mobile-menu a {
+        font-size: 18px;
+    }
+}
+/* Адаптация для телефонов */
+@media (max-width: 700px) {
+
+    /* Общие секции */
+    .hero-title,
+    .service-card,
+    .work-area,
+    .services,
+    .equipment,
+    .equipment-gallery,
+    .guarantees,
+    .contacts {
+        width: calc(100% - 24px);
+        max-width: none;
+        margin: 20px auto 0;
+        border-radius: 24px;
+    }
+
+    .hero-title,
+    .services,
+    .equipment,
+    .guarantees,
+    .contacts {
+        padding: 28px 22px;
+    }
+
+    /* Заголовки */
+    .hero-title h1,
+    .services h2,
+    .equipment h2,
+    .guarantees h2,
+    .contacts h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 28px;
+    }
+
+    /* Карточка услуги */
+    .service-card {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-text {
+        padding: 0;
+    }
+
+    .service-text h2 {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    .service-text p {
+        font-size: 17px;
+    }
+
+    .service-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Карта и описание региона */
+    .work-area {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+        padding: 28px 22px;
+        gap: 20px;
+    }
+
+    .work-text h2 {
+        font-size: 30px;
+        margin-bottom: 22px;
+    }
+
+    .work-description {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .work-description .location-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+
+    .work-description p {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .work-map {
+        width: 100%;
+        height: 260px;
+        flex: none;
+    }
+
+    .work-map img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Услуги и оборудование */
+    .services,
+    .equipment {
+        min-height: 0;
+    }
+
+    .services-content ul,
+    .equipment ul {
+        font-size: 17px;
+        line-height: 1.5;
+        padding-left: 22px;
+    }
+
+    .services-content li,
+    .equipment li {
+        padding-left: 4px;
+        margin-bottom: 12px;
+    }
+
+    /* Галерея */
+    .equipment-gallery {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .equipment-photo {
+        width: 100%;
+        height: 220px;
+        flex: none;
+    }
+
+    /* Гарантии */
+    .guarantees-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .guarantee-item {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .guarantee-item img {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 15px;
+    }
+
+    /* Контакты */
+    .contacts-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .contacts-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contacts-content p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .contacts-details {
+        width: 100%;
+        justify-self: auto;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .contacts-details a {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Кнопка наверх */
+    .back-to-top {
+        width: 48px;
+        height: 48px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 28px;
+    }
+
+    /* Логотип */
+    .logo {
+        width: min(75%, 280px);
+        margin: 20px auto;
+    }
+}
