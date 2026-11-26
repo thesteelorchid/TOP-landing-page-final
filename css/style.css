@@ -244,9 +244,7 @@ body {
     line-height: 1.4;
     margin: 0;
 }
-
 .work-map {
-  .work-map {
     flex: 0 0 40%;
     height: 380px;
     display: flex;
@@ -260,8 +258,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-}/* Наши услуги */
+} /* Наши услуги */
 .services {
     background-color: white;
     border-radius: 40px;
